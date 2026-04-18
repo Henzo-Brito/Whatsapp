@@ -1,7 +1,7 @@
-import { View, StyleSheet } from "react-native";
-import { SearchBar, Pastes} from "../all"
+import { StyleSheet, View } from "react-native";
+import { Pastes, SearchBar } from "../all";
 
-import { vars } from "@/app/constants/styles";
+import { vars } from "@/constants/styles";
 
 export function Topper(){
     return (<View style={ styles.container}>

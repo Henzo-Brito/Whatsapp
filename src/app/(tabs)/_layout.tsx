@@ -1,8 +1,8 @@
-import {Tabs} from "expo-router"
+import { Tabs } from "expo-router"
 
-import { vars } from "../constants/styles"
+import { vars } from "../../constants/styles"
 
-import { MessageSquareText, Radius} from "lucide-react-native"
+import { MessageSquareText, CircleDotDashed } from "lucide-react-native"
 
 export default function LayoutRoot(){
     return(<Tabs
@@ -28,6 +28,16 @@ export default function LayoutRoot(){
                 tabBarIcon: ({color, size}) => (
                     <MessageSquareText color={vars.colors.white} size={20} />
                 ),
-            }}/>
+            }}
+        />
+        
+        <Tabs.Screen name="status" 
+            options={{
+                title: "Status",
+                tabBarIcon: ({color, size}) => (
+                    <CircleDotDashed color={vars.colors.white} size={20} />
+                ),
+            }}
+        />
     </Tabs>)
 }

@@ -1,5 +1,5 @@
-import {View, Text, StyleSheet} from "react-native";
-import { vars } from "@/app/constants/styles";
+import { vars } from "@/constants/styles";
+import { StyleSheet, Text, View } from "react-native";
 
 export function Pastes(){
     return (<View style={styles.container}>
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         borderWidth: 1,
         borderColor: vars.colors.black1,
-
+        fontSize: 16,
         borderStyle: "solid",
         color: vars.colors.white
     },
@@ -35,8 +35,7 @@ const styles = StyleSheet.create({
         paddingInline: 8
     },
     selected:{
-        backgroundColor: vars.colors.green2,
-        borderColor: vars.colors.green,
-
+        backgroundColor: vars.colors.color2,
+        borderColor: vars.colors.color,
     }
 })

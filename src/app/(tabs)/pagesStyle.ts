@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-import { vars } from "../constants/styles";
+import { vars } from "../../constants/styles";
 
 export const styles = StyleSheet.create({
     page:{

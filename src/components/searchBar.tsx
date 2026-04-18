@@ -1,7 +1,7 @@
-import { View, TextInput, StyleSheet } from "react-native";
 import { Search } from "lucide-react-native";
+import { StyleSheet, TextInput, View } from "react-native";
 
-import { vars } from "@/app/constants/styles";
+import { vars } from "@/constants/styles";
 
 type Props = {
     placeholder: string
