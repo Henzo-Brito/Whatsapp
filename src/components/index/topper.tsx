@@ -16,7 +16,8 @@ const styles = StyleSheet.create({
         position: "fixed",
         top: 50,
         padding: 10,
-        width: "100%"
+        width: "100%",
+        zIndex: 2
     },
     search:{
         color: vars.colors.white

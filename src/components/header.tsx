@@ -7,7 +7,7 @@ type Props = {
 }
 
 export function Header({title, icon: Icon}: Props){
-    return(<View style={styles.container}>
+    return(<View style={styles.container} >
         <Text style={styles.title}>{title}</Text>
         <View style={styles.buttons}>
             <Icon />
@@ -30,7 +30,8 @@ const styles = StyleSheet.create({
         color: vars.colors.white,
         position: "absolute",
         top: 0,
-        backgroundColor: vars.colors.black2
+        backgroundColor: vars.colors.black2,
+        zIndex: 1
     },
     title:{
         color: vars.colors.white,

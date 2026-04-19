@@ -1,17 +1,18 @@
 import { vars } from "@/constants/styles";
-import { StyleSheet, Image, ImageSourcePropType , Text, View } from "react-native";
+import { StyleSheet, Image, ImageSourcePropType , Text, View, TouchableOpacity } from "react-native";
 
 type Props = {
-    img?: ImageSourcePropType,
+    img: ImageSourcePropType,
     contato: String,
     message: String,
-    time?: String
+    time?: String,
+    status?: boolean
 }
 
-export function Contato({ img, contato, message, time }: Props) {
+export function Contato({ img, status=false, contato, message, time }: Props) {
     return (
-        <View style={styles.container}>
-            <Image source={img} style={styles.image}/>
+        <TouchableOpacity style={styles.container}>
+            <Image source={img} style={[styles.image, status && styles.statusBorder]}/>
             <View style={styles.info}>
                 <View style={styles.title}>
                     <Text style={[styles.text ,styles.title]}>{contato}</Text>
@@ -19,7 +20,7 @@ export function Contato({ img, contato, message, time }: Props) {
                 </View>
                 <Text style={styles.text}>{message}</Text>
             </View>
-        </View>
+        </TouchableOpacity>
     )
 }
 
@@ -48,5 +49,10 @@ const styles = StyleSheet.create({
     },
     text:{
         color: vars.colors.white3
+    },
+    statusBorder:{
+        borderWidth: 2,
+        padding: 1,
+        borderColor: vars.colors.color
     }
 })
