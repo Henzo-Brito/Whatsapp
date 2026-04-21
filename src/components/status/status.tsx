@@ -30,7 +30,7 @@ export function Status({contatoImg, statusImg=undefined, name}: Props){
     })
 
     return( 
-    <TouchableOpacity style={{borderRadius: 10, overflow: "hidden"}}>
+    <TouchableOpacity style={{borderRadius: 10, margin: 5, overflow: "hidden"}}>
         <ImageBackground source={statusImg} style={styles.status}>
             <Image source={contatoImg} style={styles.contato}></Image>
             <Text style={styles.name}>{name}</Text>

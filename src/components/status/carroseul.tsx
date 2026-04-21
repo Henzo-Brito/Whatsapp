@@ -13,7 +13,7 @@ export function Carroseul({text}: Props){
     return(
         <View style={styles.container}>
             <Text style={styles.title}>{text}</Text>
-            <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} contentContainerStyle={styles.scroll}>
+            <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
                 <Status name="Adicionar" contatoImg={require("@i/user1.jpg")} />
                 <Status name="Henzo" contatoImg={require("@i/user1.jpg")} statusImg={require("@i/user1.jpg")} />
                 <Status name="Henzo" contatoImg={require("@i/user1.jpg")} statusImg={require("@i/user1.jpg")} />
@@ -32,16 +32,15 @@ export function Carroseul({text}: Props){
 const styles = StyleSheet.create({
     container:{
         marginTop: 50,
-        padding: 10,
     },
     scroll:{
         width: "100%",
-        gap: 10
     },
     title:{
         color: vars.colors.white,
         fontWeight: 600,
         marginBlock: 10,
-        fontSize: 20
+        fontSize: 20,
+        margin: 10
     }
 })

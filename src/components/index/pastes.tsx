@@ -1,12 +1,12 @@
 import { vars } from "@/constants/styles";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
 
 export function Pastes(){
     return (<View style={styles.container}>
-        <Text style={[styles.filt, styles.selected]} className="select">Todos</Text>
-        <Text style={[styles.filt, styles.plus]}>
+        <TouchableOpacity style={[styles.filt, styles.selected]} className="select">Todos</TouchableOpacity>
+        <TouchableOpacity style={[styles.filt, styles.plus]}>
             +
-        </Text>
+        </TouchableOpacity>
     </View>)
 }
 
@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: vars.colors.black1,
         fontSize: 16,
+        fontFamily: "calibri",
         borderStyle: "solid",
         color: vars.colors.white
     },

@@ -1,25 +1,24 @@
 import { vars } from "@/constants/styles";
 import { StyleSheet, Image, ImageSourcePropType , Text, View, TouchableOpacity } from "react-native";
 
-type Props = {
-    img: ImageSourcePropType,
-    contato: String,
-    message: String,
-    time?: String,
-    status?: boolean
+import { User } from "@/types/user";
+
+type Props  = User & {
+    children?: React.ReactNode,
+    width?: number,
+    color?: string
 }
 
-export function Contato({ img, status=false, contato, message, time }: Props) {
+export function Contato({ width = 83, image, color = vars.colors.white, status=false, contato, message, children }: Props) {
+    
     return (
         <TouchableOpacity style={styles.container}>
-            <Image source={img} style={[styles.image, status && styles.statusBorder]}/>
-            <View style={styles.info}>
-                <View style={styles.title}>
-                    <Text style={[styles.text ,styles.title]}>{contato}</Text>
-                    <Text style={styles.text}>{time}</Text>
-                </View>
+            <Image source={image} style={[styles.image, status && styles.statusBorder]}/>
+            <View style={{width: `${width}%`}}>
+                <Text style={[styles.text ,styles.title, {color: color}]}>{contato}</Text>
                 <Text style={styles.text}>{message}</Text>
             </View>
+            {children}
         </TouchableOpacity>
     )
 }
@@ -29,6 +28,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         padding: 10,
+        gap: 10,
         justifyContent: "space-between"
     },
     image: {
@@ -37,18 +37,11 @@ const styles = StyleSheet.create({
         borderRadius: "50%",
     },
     title:{
-        alignItems: "center",
-        justifyContent: "space-between",
-        flexDirection: "row",
-        color: vars.colors.white,
         fontWeight: 600,
         fontSize: 16
     },
-    info:{
-        width: "80%"
-    },
     text:{
-        color: vars.colors.white3
+        color: vars.colors.white2
     },
     statusBorder:{
         borderWidth: 2,

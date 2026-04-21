@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     },
     title:{
         color: vars.colors.white,
-        fontWeight: 900,
+        fontWeight: 800,
         fontSize: 20
     },
     buttons:{
