@@ -50,6 +50,49 @@ export const users: User[] = [
     message: "Chegando aí",
     status: true
   },
+    {
+    contato: "Rafael",
+    image: require("@i/user1.jpg"),
+    time: "18:40",
+    message: "Chegando aí",
+    status: true
+  },  {
+    contato: "Rafael",
+    image: require("@i/user1.jpg"),
+    time: "18:40",
+    message: "Chegando aí",
+    status: true
+  },  {
+    contato: "Rafael",
+    image: require("@i/user1.jpg"),
+    time: "18:40",
+    message: "Chegando aí",
+    status: true
+  },  {
+    contato: "Rafael",
+    image: require("@i/user1.jpg"),
+    time: "18:40",
+    message: "Chegando aí",
+    status: true
+  },  {
+    contato: "Rafael",
+    image: require("@i/user1.jpg"),
+    time: "18:40",
+    message: "Chegando aí",
+    status: true
+  },  {
+    contato: "Rafael",
+    image: require("@i/user1.jpg"),
+    time: "18:40",
+    message: "Chegando aí",
+    status: true
+  },  {
+    contato: "Rafael",
+    image: require("@i/user1.jpg"),
+    time: "18:40",
+    message: "Chegando aí",
+    status: true
+  },
   {
     contato: "Beatriz",
     image: require("@i/user1.jpg"),

@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
     container:{
         alignItems: "center", 
         flexDirection: "row",
-        marginTop: 80,
         marginInline: 10,
         justifyContent: "space-between"
     }

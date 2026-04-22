@@ -11,7 +11,7 @@ type Props = {
 export function Carroseul({text}: Props){
     
     return(
-        <View style={styles.container}>
+        <View>
             <Text style={styles.title}>{text}</Text>
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
                 <Status name="Adicionar" contatoImg={require("@i/user1.jpg")} />
@@ -30,16 +30,12 @@ export function Carroseul({text}: Props){
 }
 
 const styles = StyleSheet.create({
-    container:{
-        marginTop: 50,
-    },
     scroll:{
         width: "100%",
     },
     title:{
         color: vars.colors.white,
         fontWeight: 600,
-        marginBlock: 10,
         fontSize: 20,
         margin: 10
     }

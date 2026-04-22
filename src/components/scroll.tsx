@@ -5,17 +5,10 @@ import { vars } from "@/constants/styles";
 type Props = {
     title: String,
     children: React.ReactNode,
-    marginTop?: number
 }
 
-export function Scroll({title, children, marginTop}: Props){
-    const dynamicStyle: ViewStyle | null = 
-    marginTop ? {
-        top: marginTop,
-        position: "absolute"
-    } : null
-    
-    return (<View style={ dynamicStyle}>
+export function Scroll({title, children, ...rest}: Props){
+    return (<View {...rest}>
         <Text style={styles.title}>
             {title}
         </Text>

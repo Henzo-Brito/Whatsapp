@@ -23,13 +23,12 @@ const styles = StyleSheet.create({
     container:{
         flexDirection: "row",
         width: "100%",
+        height: "100%",
         alignItems: "center",
         justifyContent: "space-between",
         paddingBlock: 20,
         paddingInline: 12,
         color: vars.colors.white,
-        position: "absolute",
-        top: 0,
         backgroundColor: vars.colors.black2,
         zIndex: 1
     },

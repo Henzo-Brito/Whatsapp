@@ -17,7 +17,9 @@ const styles = StyleSheet.create({
         top: 50,
         padding: 10,
         width: "100%",
-        zIndex: 2
+        zIndex: 2,
+        height: 100,
+        backgroundColor: vars.colors.black3
     },
     search:{
         color: vars.colors.white
